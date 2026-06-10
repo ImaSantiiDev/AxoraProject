@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Axora - Desarrollo web profesional para tu negocio. Creamos páginas web modernas, rápidas y a medida.">
+    <meta name="description" content="Axora - Desarrollo web profesional para tu negocio. Tu web lista en menos de 7 días.">
     <title>Axora | Desarrollo Web</title>
 
     <!-- Bootstrap CSS -->
@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="front/dist/CSS/style.css">
     <link rel="stylesheet" href="front/dist/CSS/movil.css">
 
-    <!-- Favicon (cuando tengas el logo, descomenta y ajusta) -->
-<link rel="icon" type="image/png" href="front/dist/assets/img/logo.png">
+    <link rel="icon" type="image/png" href="front/dist/assets/img/logo.png">
 </head>
 <body>
 
@@ -43,23 +42,55 @@
         </div>
     </nav>
 
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO (dividido en dos) ===== -->
     <header id="inicio" class="hero d-flex align-items-center">
-        <div class="container text-center">
-            <p class="hero-kicker">DESARROLLO WEB PROFESIONAL</p>
+        <div class="container">
+            <div class="row align-items-center g-5">
 
-            <!-- Título con efecto neón letra por letra -->
-            <h1 class="neon-title" aria-label="AXORA">
-                <span>A</span><span>X</span><span>O</span><span>R</span><span>A</span>
-            </h1>
+                <!-- Lado izquierdo: AXORA con neón -->
+                <div class="col-lg-6 text-center text-lg-start">
+                    <p class="hero-kicker">DESARROLLO WEB PROFESIONAL</p>
 
-            <p class="hero-sub mx-auto">
-                Creamos páginas web modernas, rápidas y a medida para que tu negocio
-                se destaque en internet.
-            </p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-                <a href="front/dist/paginas/contacto.html" class="btn btn-axora btn-lg px-5">Empezar mi proyecto</a>
-                <a href="#servicios" class="btn btn-axora-outline btn-lg px-5">Ver servicios</a>
+                    <h1 class="neon-title" aria-label="AXORA">
+                        <span>A</span><span>X</span><span>O</span><span>R</span><span>A</span>
+                    </h1>
+
+                    <p class="hero-sub mx-auto mx-lg-0">
+                        Creamos páginas web modernas, rápidas y a medida para que tu negocio
+                        se destaque en internet.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap mt-4">
+                        <a href="front/dist/paginas/contacto.html" class="btn btn-axora btn-lg px-5">Empezar mi proyecto</a>
+                        <a href="#servicios" class="btn btn-axora-outline btn-lg px-5">Ver servicios</a>
+                    </div>
+                </div>
+
+                <!-- Lado derecho: tarjeta promo "7 días" -->
+                <div class="col-lg-6">
+                    <div class="promo-card mx-auto">
+                        <!-- Barra estilo navegador -->
+                        <div class="promo-browser-bar">
+                            <span class="dot dot-rojo"></span>
+                            <span class="dot dot-amarillo"></span>
+                            <span class="dot dot-verde"></span>
+                            <span class="promo-url">axora.web/tu-negocio</span>
+                        </div>
+                        <div class="promo-body text-center">
+                            <p class="promo-pre">TU WEB LISTA EN MENOS DE</p>
+                            <p class="promo-dias">
+                                <span class="promo-numero">7</span>
+                                <span class="promo-texto-dias">DÍAS</span>
+                            </p>
+                            <!-- Barra de progreso animada -->
+                            <div class="promo-barra">
+                                <div class="promo-progreso"></div>
+                            </div>
+                            <p class="promo-estado">Desplegando tu sitio<span class="cursor-parpadeo">▌</span></p>
+                            <p class="promo-solo">⚡ SOLO CON <span class="acento">AXORA</span></p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </header>
@@ -152,14 +183,34 @@
                     <a href="front/dist/paginas/contacto.html" class="btn btn-axora mt-3 px-4">Hablemos de tu proyecto</a>
                 </div>
                 <div class="col-lg-6">
-                    <!-- ===================================================== -->
-                    <!-- AQUÍ PUEDE IR UNA FOTO DEL EQUIPO O ILUSTRACIÓN:      -->
-                    <!-- guardala en front/dist/assets/ y descomentá:         -->
-                    <!-- <img src="front/dist/assets/equipo.jpg" alt="Equipo Axora" class="img-fluid rounded-4"> -->
-                    <!-- ===================================================== -->
-                    <div class="placeholder-img d-flex align-items-center justify-content-center">
-                        <span>📷 Foto del equipo</span>
+
+                    <!-- =====================================================
+                         FOTO DEL EQUIPO (comentado hasta tener la foto):
+                         1. Guardar la foto en front/dist/assets/img/equipo.jpg
+                         2. Descomentar el <img> de abajo
+                         3. Borrar (o comentar) la tarjeta .code-card
+
+                    <img src="front/dist/assets/img/equipo.jpg" alt="Equipo Axora" class="img-fluid rounded-4">
+
+                    ===================================================== -->
+
+                    <!-- Mientras tanto: tarjeta estilo editor de código -->
+                    <div class="code-card mx-auto">
+                        <div class="code-bar">
+                            <span class="dot dot-rojo"></span>
+                            <span class="dot dot-amarillo"></span>
+                            <span class="dot dot-verde"></span>
+                            <span class="code-archivo">equipo.js</span>
+                        </div>
+                        <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">axora</span> = {
+  <span class="c-prop">fundadores</span>: [<span class="c-str">"Santi"</span>, <span class="c-str">"Franco"</span>],
+  <span class="c-prop">mision</span>: <span class="c-str">"Webs que hacen crecer negocios"</span>,
+  <span class="c-prop">fundada</span>: <span class="c-num">2026</span>,
+  <span class="c-prop">cafesPorDia</span>: <span class="c-num">Infinity</span>,
+  <span class="c-prop">pasion</span>: <span class="c-bool">true</span>
+};<span class="cursor-parpadeo">▌</span></code></pre>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -183,9 +234,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS (necesario para el menú colapsable) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS propio (mínimo) -->
     <script src="front/dist/JS/main.js"></script>
 </body>
 </html>

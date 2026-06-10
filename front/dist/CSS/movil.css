@@ -55,3 +55,51 @@
         font-size: 1.8rem;
     }
 }
+
+/* ===== Hero dividido y tarjetas en móvil ===== */
+
+@media (max-width: 991px) {
+    /* En móvil el hero se apila: más aire arriba y abajo */
+    .hero {
+        min-height: auto;
+        padding: 130px 0 70px;
+    }
+
+    .promo-card {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 767px) {
+    .promo-numero {
+        font-size: 4.5rem;
+    }
+
+    .promo-texto-dias {
+        font-size: 1.8rem;
+    }
+
+    .promo-pre {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .code-body {
+        font-size: 0.8rem;
+        padding: 1.2rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-body {
+        padding: 1.6rem 1.2rem 1.4rem;
+    }
+
+    .promo-numero {
+        font-size: 3.8rem;
+    }
+
+    .promo-solo {
+        font-size: 0.9rem;
+    }
+}
