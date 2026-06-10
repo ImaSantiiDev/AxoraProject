@@ -1,0 +1,399 @@
+/* =========================================
+   AXORA - Estilos principales
+   Paleta: #c34e6b (acento) / negro / blanco
+   ========================================= */
+
+:root {
+    --axora: #c34e6b;
+    --axora-claro: #e0718d;
+    --axora-oscuro: #8f3550;
+    --negro: #0d0d0f;
+    --negro-suave: #16161a;
+    --blanco: #ffffff;
+    --gris-texto: #b8b8be;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* compensa el navbar fijo */
+}
+
+body {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem 0;
+}
+
+/* clase que agrega el JS al hacer scroll (y fija en contacto.html) */
+.navbar-solida,
+.navbar.scrolled {
+    background-color: rgba(13, 13, 15, 0.95);
+    box-shadow: 0 2px 20px rgba(195, 78, 107, 0.15);
+}
+
+.logo-img {
+    height: 42px;
+    width: auto;
+}
+
+.brand-text {
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 1.4rem;
+    color: var(--blanco);
+}
+
+.navbar .nav-link {
+    color: var(--blanco);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--axora);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--axora-claro);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 70%;
+}
+
+/* Botón hamburguesa personalizado */
+.navbar-toggler {
+    border: 1px solid var(--axora);
+    padding: 8px 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(195, 78, 107, 0.4);
+}
+
+.toggler-icon {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--blanco);
+    position: relative;
+}
+
+.toggler-icon::before,
+.toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background-color: var(--blanco);
+}
+
+.toggler-icon::before { top: -7px; }
+.toggler-icon::after  { top: 7px; }
+
+/* ===== BOTONES ===== */
+.btn-axora {
+    background-color: var(--axora);
+    color: var(--blanco);
+    border: 2px solid var(--axora);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-axora:hover {
+    background-color: var(--axora-oscuro);
+    border-color: var(--axora-oscuro);
+    color: var(--blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(195, 78, 107, 0.45);
+}
+
+.btn-axora-outline {
+    background-color: transparent;
+    color: var(--blanco);
+    border: 2px solid var(--axora);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-axora-outline:hover {
+    background-color: var(--axora);
+    color: var(--blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(195, 78, 107, 0.45);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(195, 78, 107, 0.18), transparent 60%),
+        var(--negro);
+    padding-top: 80px;
+}
+
+.hero-kicker {
+    color: var(--axora-claro);
+    letter-spacing: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hero-sub {
+    color: var(--gris-texto);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+/* ===== TÍTULO NEÓN (recorre letra por letra) ===== */
+.neon-title {
+    font-size: clamp(3.5rem, 12vw, 7.5rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: var(--blanco);
+}
+
+.neon-title span {
+    display: inline-block;
+    animation: neon-recorrido 2.5s ease-in-out infinite;
+}
+
+/* Delay escalonado: el brillo "viaja" de letra en letra */
+.neon-title span:nth-child(1) { animation-delay: 0s; }
+.neon-title span:nth-child(2) { animation-delay: 0.25s; }
+.neon-title span:nth-child(3) { animation-delay: 0.5s; }
+.neon-title span:nth-child(4) { animation-delay: 0.75s; }
+.neon-title span:nth-child(5) { animation-delay: 1s; }
+
+@keyframes neon-recorrido {
+    0%, 100% {
+        color: var(--blanco);
+        text-shadow: none;
+    }
+    10% {
+        color: var(--axora-claro);
+        text-shadow:
+            0 0 8px var(--axora),
+            0 0 20px var(--axora),
+            0 0 45px var(--axora),
+            0 0 80px var(--axora-oscuro);
+    }
+    30% {
+        color: var(--blanco);
+        text-shadow: none;
+    }
+}
+
+/* ===== SECCIONES ===== */
+.seccion {
+    padding: 100px 0;
+}
+
+.seccion-oscura {
+    background-color: var(--negro-suave);
+}
+
+.titulo-seccion {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.acento {
+    color: var(--axora);
+}
+
+.sub-seccion {
+    color: var(--gris-texto);
+    max-width: 550px;
+    margin-top: 0.75rem;
+}
+
+/* ===== CARDS DE SERVICIOS ===== */
+.card-axora {
+    background-color: var(--negro-suave);
+    border: 1px solid rgba(195, 78, 107, 0.25);
+    border-radius: 16px;
+    padding: 2.2rem 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.card-axora:hover {
+    transform: translateY(-8px);
+    border-color: var(--axora);
+    box-shadow: 0 15px 40px rgba(195, 78, 107, 0.25);
+}
+
+.card-icono {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-axora h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.card-axora p {
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+/* ===== PROCESO ===== */
+.paso {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.paso:hover {
+    background-color: rgba(195, 78, 107, 0.08);
+}
+
+.paso-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--axora);
+    margin-bottom: 0.5rem;
+}
+
+.paso h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.paso p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ===== NOSOTROS ===== */
+.texto-nosotros {
+    color: var(--gris-texto);
+    font-size: 1.1rem;
+}
+
+.texto-nosotros strong {
+    color: var(--blanco);
+}
+
+.placeholder-img {
+    background-color: var(--negro-suave);
+    border: 2px dashed rgba(195, 78, 107, 0.5);
+    border-radius: 16px;
+    min-height: 320px;
+    color: var(--gris-texto);
+    font-size: 1.1rem;
+}
+
+/* ===== CTA FINAL ===== */
+.cta-final {
+    padding: 90px 0;
+    background: linear-gradient(135deg, var(--axora-oscuro), var(--axora));
+}
+
+.cta-final h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.cta-final p {
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+/* El botón dentro del CTA invierte colores para contrastar */
+.cta-final .btn-axora {
+    background-color: var(--blanco);
+    border-color: var(--blanco);
+    color: var(--axora-oscuro);
+}
+
+.cta-final .btn-axora:hover {
+    background-color: var(--negro);
+    border-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--negro-suave);
+    padding: 50px 0 30px;
+    border-top: 1px solid rgba(195, 78, 107, 0.25);
+}
+
+.footer-brand {
+    color: var(--axora);
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    color: var(--gris-texto);
+}
+
+.footer small {
+    color: var(--gris-texto);
+    opacity: 0.7;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.seccion-contacto {
+    min-height: 100vh;
+    padding-top: 140px;
+}
+
+.form-axora .form-label {
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.form-axora .form-control {
+    background-color: var(--negro-suave);
+    border: 1px solid rgba(195, 78, 107, 0.35);
+    color: var(--blanco);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-axora .form-control::placeholder {
+    color: var(--gris-texto);
+    opacity: 0.6;
+}
+
+.form-axora .form-control:focus {
+    background-color: var(--negro-suave);
+    color: var(--blanco);
+    border-color: var(--axora);
+    box-shadow: 0 0 0 3px rgba(195, 78, 107, 0.25);
+}

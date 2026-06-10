@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Axora - Desarrollo web profesional para tu negocio. Creamos páginas web modernas, rápidas y a medida.">
+    <title>Axora | Desarrollo Web</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propios -->
+    <link rel="stylesheet" href="front/dist/CSS/style.css">
+    <link rel="stylesheet" href="front/dist/CSS/movil.css">
+
+    <!-- Favicon (cuando tengas el logo, descomenta y ajusta) -->
+<link rel="icon" type="image/png" href="front/dist/assets/img/logo.png">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="front/dist/assets/img/logo.png" alt="Logo Axora" class="logo-img">
+                <span class="brand-text">AXORA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-axora btn-sm px-4" href="front/dist/paginas/contacto.html">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header id="inicio" class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <p class="hero-kicker">DESARROLLO WEB PROFESIONAL</p>
+
+            <!-- Título con efecto neón letra por letra -->
+            <h1 class="neon-title" aria-label="AXORA">
+                <span>A</span><span>X</span><span>O</span><span>R</span><span>A</span>
+            </h1>
+
+            <p class="hero-sub mx-auto">
+                Creamos páginas web modernas, rápidas y a medida para que tu negocio
+                se destaque en internet.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                <a href="front/dist/paginas/contacto.html" class="btn btn-axora btn-lg px-5">Empezar mi proyecto</a>
+                <a href="#servicios" class="btn btn-axora-outline btn-lg px-5">Ver servicios</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section id="servicios" class="seccion">
+        <div class="container">
+            <h2 class="titulo-seccion text-center">Nuestros <span class="acento">servicios</span></h2>
+            <p class="sub-seccion text-center mx-auto">Soluciones web pensadas para hacer crecer tu negocio.</p>
+
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="card-axora h-100">
+                        <div class="card-icono">🌐</div>
+                        <h3>Landing Pages</h3>
+                        <p>Páginas de presentación que convierten visitantes en clientes. Diseño atractivo y mensaje claro.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-axora h-100">
+                        <div class="card-icono">🛒</div>
+                        <h3>Tiendas Online</h3>
+                        <p>Catálogos y e-commerce para que vendas tus productos las 24 horas, los 7 días de la semana.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-axora h-100">
+                        <div class="card-icono">⚙️</div>
+                        <h3>Webs a Medida</h3>
+                        <p>Sistemas y sitios personalizados según las necesidades específicas de tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESO ===== -->
+    <section id="proceso" class="seccion seccion-oscura">
+        <div class="container">
+            <h2 class="titulo-seccion text-center">Cómo <span class="acento">trabajamos</span></h2>
+            <p class="sub-seccion text-center mx-auto">Un proceso simple y transparente, de la idea al lanzamiento.</p>
+
+            <div class="row g-4 mt-3">
+                <div class="col-6 col-lg-3">
+                    <div class="paso text-center">
+                        <span class="paso-num">01</span>
+                        <h3>Charlamos</h3>
+                        <p>Escuchamos tu idea y entendemos qué necesita tu negocio.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="paso text-center">
+                        <span class="paso-num">02</span>
+                        <h3>Diseñamos</h3>
+                        <p>Creamos una propuesta visual alineada a tu marca.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="paso text-center">
+                        <span class="paso-num">03</span>
+                        <h3>Desarrollamos</h3>
+                        <p>Programamos tu web rápida, segura y adaptada a celulares.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="paso text-center">
+                        <span class="paso-num">04</span>
+                        <h3>Lanzamos</h3>
+                        <p>Publicamos tu sitio y te acompañamos después del lanzamiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOSOTROS ===== -->
+    <section id="nosotros" class="seccion">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="titulo-seccion">Quiénes <span class="acento">somos</span></h2>
+                    <p class="texto-nosotros">
+                        Somos <strong>Santi y Franco</strong>, dos desarrolladores apasionados por la web
+                        que decidimos unir fuerzas para crear <strong>Axora</strong>.
+                    </p>
+                    <p class="texto-nosotros">
+                        Nuestro objetivo es simple: que cualquier negocio, grande o chico,
+                        pueda tener una presencia online profesional sin complicaciones.
+                    </p>
+                    <a href="front/dist/paginas/contacto.html" class="btn btn-axora mt-3 px-4">Hablemos de tu proyecto</a>
+                </div>
+                <div class="col-lg-6">
+                    <!-- ===================================================== -->
+                    <!-- AQUÍ PUEDE IR UNA FOTO DEL EQUIPO O ILUSTRACIÓN:      -->
+                    <!-- guardala en front/dist/assets/ y descomentá:         -->
+                    <!-- <img src="front/dist/assets/equipo.jpg" alt="Equipo Axora" class="img-fluid rounded-4"> -->
+                    <!-- ===================================================== -->
+                    <div class="placeholder-img d-flex align-items-center justify-content-center">
+                        <span>📷 Foto del equipo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final text-center">
+        <div class="container">
+            <h2>¿Listo para llevar tu negocio a internet?</h2>
+            <p>Contanos tu idea y te respondemos en menos de 24 horas.</p>
+            <a href="front/dist/paginas/contacto.html" class="btn btn-axora btn-lg px-5 mt-2">Contactanos</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="brand-text footer-brand">AXORA</p>
+            <p class="mb-1">Desarrollo web para negocios que quieren crecer.</p>
+            <small>© 2026 Axora — Hecho con 💜 por Santi & Franco</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (necesario para el menú colapsable) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS propio (mínimo) -->
+    <script src="front/dist/JS/main.js"></script>
+</body>
+</html>

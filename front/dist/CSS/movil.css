@@ -1,0 +1,57 @@
+/* =========================================
+   AXORA - Ajustes para móviles
+   ========================================= */
+
+@media (max-width: 991px) {
+    /* El menú colapsado tiene fondo sólido para que se lea bien */
+    .navbar-collapse {
+        background-color: rgba(13, 13, 15, 0.98);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-top: 0.75rem;
+        border: 1px solid rgba(195, 78, 107, 0.3);
+    }
+
+    .navbar .nav-link {
+        padding: 0.6rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .seccion {
+        padding: 70px 0;
+    }
+
+    .titulo-seccion {
+        font-size: 1.9rem;
+    }
+
+    .hero-kicker {
+        letter-spacing: 4px;
+        font-size: 0.75rem;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .cta-final h2 {
+        font-size: 1.6rem;
+    }
+
+    .placeholder-img {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-lg {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .paso-num {
+        font-size: 1.8rem;
+    }
+}
