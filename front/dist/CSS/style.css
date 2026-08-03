@@ -93,11 +93,15 @@ body {
 /* Botón hamburguesa personalizado */
 .navbar-toggler {
     border: 1px solid var(--axora);
-    padding: 8px 10px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 2px;
 }
 
-.navbar-toggler:focus {
+/* También sobreescribe :focus-visible, que Bootstrap dispara al tocar
+   en móvil y trae su propio anillo más grande */
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: none;
     box-shadow: 0 0 0 2px rgba(195, 78, 107, 0.5);
 }
 
@@ -361,6 +365,89 @@ body {
 .footer-brand {
     color: var(--axora);
     margin-bottom: 0.5rem;
+}
+
+.footer-marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.footer-logo {
+    height: 46px;
+    width: auto;
+}
+
+.footer-brand-grande {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--blanco);
+}
+
+.footer-logo-mirror {
+    transform: scaleX(-1);
+}
+
+.footer-tagline {
+    color: var(--gris-texto);
+    margin: 1.1rem auto 1.4rem;
+    max-width: 420px;
+}
+
+.footer-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--gris-texto);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(195, 78, 107, 0.3);
+    border-radius: 50px;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social:hover {
+    color: var(--axora-claro);
+    border-color: var(--axora);
+    background-color: rgba(195, 78, 107, 0.1);
+}
+
+.footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--axora);
+    border: 1px solid var(--axora);
+    border-radius: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-whatsapp svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--blanco);
+}
+
+.footer-whatsapp:hover {
+    background-color: var(--axora-oscuro);
+    border-color: var(--axora-oscuro);
 }
 
 .footer p {
