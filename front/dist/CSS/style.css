@@ -24,6 +24,11 @@ html {
     scroll-padding-top: 80px; /* compensa el navbar fijo */
 }
 
+html,
+body {
+    overflow-x: clip;
+}
+
 body {
     background-color: var(--negro);
     color: var(--blanco);
@@ -89,10 +94,11 @@ body {
 .navbar-toggler {
     border: 1px solid var(--axora);
     padding: 8px 10px;
+    border-radius: 4px;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(195, 78, 107, 0.4);
+    box-shadow: 0 0 0 2px rgba(195, 78, 107, 0.5);
 }
 
 .toggler-icon {
@@ -634,11 +640,15 @@ body {
     animation: pulso-wa 2.5s ease-in-out infinite;
 }
 
-.btn-whatsapp:hover {
-    transform: scale(1.1);
-}
-
 @keyframes pulso-wa {
     0%, 100% { opacity: 0.45; }
     50%      { opacity: 0.9; }
+}
+
+/* En pantallas táctiles el hover queda "pegado" tras el tap;
+   se limita el agrandado a dispositivos con mouse */
+@media (hover: hover) {
+    .btn-whatsapp:hover {
+        transform: scale(1.1);
+    }
 }
