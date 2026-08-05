@@ -739,3 +739,102 @@ body {
         transform: scale(1.1);
     }
 }
+
+/* ===== PROYECTOS ===== */
+/* Fondo propio: brillo axora muy suave y líneas divisorias finas
+   para que la sección se diferencie de las vecinas sin romper el estilo */
+.seccion-proyectos {
+    background:
+        radial-gradient(ellipse at 80% 15%, rgba(195, 78, 107, 0.13), transparent 55%),
+        radial-gradient(ellipse at 10% 95%, rgba(195, 78, 107, 0.08), transparent 50%),
+        var(--negro);
+    border-top: 1px solid rgba(195, 78, 107, 0.15);
+    border-bottom: 1px solid rgba(195, 78, 107, 0.15);
+}
+
+.proyecto-frame {
+    display: block;
+    background-color: var(--negro-suave);
+    border: 1px solid rgba(195, 78, 107, 0.35);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(195, 78, 107, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-frame:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 70px rgba(195, 78, 107, 0.3);
+}
+
+.proyecto-frame-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: var(--negro);
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(195, 78, 107, 0.25);
+}
+
+.proyecto-frame-url {
+    margin-left: 10px;
+    min-width: 0;
+    font-size: 0.8rem;
+    color: var(--gris-texto);
+    background-color: var(--negro-suave);
+    padding: 3px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.proyecto-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.proyecto-badge {
+    display: inline-block;
+    background-color: rgba(195, 78, 107, 0.15);
+    border: 1px solid var(--axora);
+    color: var(--axora-claro);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.1rem;
+}
+
+.proyecto-titulo {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.proyecto-desc {
+    color: var(--gris-texto);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.proyecto-datos {
+    list-style: none;
+    margin: 1.4rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.proyecto-datos li {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+.proyecto-dato-clave {
+    color: var(--blanco);
+    font-weight: 600;
+}
